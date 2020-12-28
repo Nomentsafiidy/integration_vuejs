@@ -14,33 +14,6 @@
           <p>{{ work.subTitle }}</p>
         </div>
       </section>
-      <!-- <section class="work-item" @click="showModal">
-        <img
-          src="./../assets/img/igor-ovsyannykov-329196-unsplash.png"
-          alt="igor-ovsyannykov-329196-unsplash"
-        />
-        <div class="work_mask"></div>
-        <div class="work-item-label">
-          <span class="work-title">Lorem ipsum</span>
-          <p>Lorem ipsum dolor, sit amet</p>
-        </div>
-      </section>
-      <section class="work-item" @click="showModal">
-        <img src="./../assets/img/Mask Copy 5.png" alt="Mask Copy 5" />
-        <div class="work_mask"></div>
-        <div class="work-item-label">
-          <span class="work-title">Lorem ipsum</span>
-          <p>Lorem ipsum dolor, sit amet</p>
-        </div>
-      </section>
-      <section class="work-item" @click="showModal">
-        <img src="./../assets/img/Path.png" alt="Path" />
-        <div class="work_mask"></div>
-        <div class="work-item-label">
-          <span class="work-title">Lorem ipsum</span>
-          <p>Lorem ipsum dolor, sit amet</p>
-        </div>
-      </section> -->
     </div>
     <section class="work_subtitle">
       ALL OUR WORKS
@@ -48,6 +21,7 @@
     <transition>
       <div v-if="isModalShow" class="work-modal">
         <div class="work_modal_content">
+          <span class="close_modal" @click="hideModal">&#10006;</span>
           <div class="modal_title">{{ modalContent.title }}</div>
           <div class="modal_subtitle">{{ modalContent.subTitle }}</div>
           <div class="modal_body">
@@ -56,9 +30,11 @@
             </section>
             <section class="section_left">
               <h5>{{ modalContent.textTitle }}</h5>
-              <p>
-                {{ modalContent.text }}
-              </p>
+              <div class="section_left_body">
+                <p>
+                  {{ modalContent.text }}
+                </p>
+              </div>
               <button class="btn btn_white " @click="hideModal">Lorem</button>
               <button class="btn btn_danger margin-left" @click="hideModal">
                 Cuncat
@@ -397,6 +373,17 @@ export default {
     color: #000000;
     margin-bottom: 15px;
   }
+  .close_modal {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    padding: 5px;
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      color: lighten(#000, 4);
+    }
+  }
 }
 .modal_body {
   display: flex;
@@ -422,7 +409,11 @@ export default {
       font-size: 28px;
       line-height: 37px;
     }
-
+    .section_left_body {
+      max-height: calc(100% - 150px);
+      overflow-y: auto;
+      margin: 20px 0;
+    }
     p {
       color: #000000;
       font-size: 18px;
