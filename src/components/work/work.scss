@@ -131,14 +131,16 @@
   display: flex;
   position: relative;
   height: calc(100% - 80px);
+  overflow-y: auto;
   .section_right {
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
     }
+    min-width: 40%;
     max-width: 740px;
     max-height: 740px;
-    height: 100%;
+    height: auto;
     margin: 0px;
   }
   .section_left {
@@ -152,7 +154,6 @@
       line-height: 37px;
     }
     .section_left_body {
-      max-height: calc(100% - 150px);
       overflow-y: auto;
       margin: 20px 0;
     }
