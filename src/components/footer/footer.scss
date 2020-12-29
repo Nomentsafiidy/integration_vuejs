@@ -89,26 +89,31 @@ a {
   font-size: 22px;
   line-height: 29px;
 }
-.footer_input {
-  background: transparent;
-  height: 42px;
-  border: none;
-  border-bottom: solid 1px #ffffff;
-  width: 100%;
-}
+
 .form_group {
   margin-bottom: 25px;
-}
-.footer_textarea {
-  background: transparent;
-  border: none;
+  position: relative;
   border-bottom: solid 1px #ffffff;
-  width: 100%;
+  label {
+    float: left;
+    position: absolute;
+  }
+  input {
+    background: transparent;
+    height: 42px;
+    border: none;
+    width: 100%;
+    &:focus {
+      border: none;
+    }
+  }
+  .footer_textarea {
+    background: transparent;
+    border: none;
+    width: 100%;
+  }
 }
+
 .content_center {
   text-align: center;
-}
-.float_label {
-  float: left;
-  position: absolute;
 }

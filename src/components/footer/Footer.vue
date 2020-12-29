@@ -46,12 +46,12 @@
       <section class="footer_right">
         <form action="">
           <div class="form_group">
-            <label for="name" class="float_label">Name *</label>
+            <label for="name">Name *</label>
             <input class="footer_input" type="text" name="name" />
           </div>
           <div class="form_group">
             <label for="email" class="float_label">Email *</label>
-            <input class="footer_input" type="email" name="email" />
+            <input type="email" name="email" />
           </div>
           <div class="form_group">
             <label for="message" class="float_label">Message *</label>
