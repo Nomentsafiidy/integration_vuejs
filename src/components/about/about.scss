@@ -14,8 +14,16 @@ h4 {
 .about_body {
   display: flex;
   max-height: 720px;
+  .about_img {
+    min-width: 50%;
+    height: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
   .about_text {
-    width: 100%;
+    min-width: 50%;
     background: #ea4235;
     padding: 60px;
     color: #fff;
