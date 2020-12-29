@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import About from "./components/About.vue";
-import Service from "./components/Service.vue";
-import Work from "./components/Work.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/header/Header";
+import About from "./components/about/About";
+import Service from "./components/service/Service";
+import Work from "./components/work/Work";
+import Footer from "./components/footer/Footer";
 
 export default {
   name: "App",

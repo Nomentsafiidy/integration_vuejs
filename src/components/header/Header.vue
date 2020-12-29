@@ -2,7 +2,7 @@
   <header>
     <div class="topbar">
       <a href="#" class="topbar_logo">
-        <img src="./../assets/svg/logo.svg" alt="Logo" />
+        <img src="./../../assets/svg/logo.svg" alt="Logo" />
       </a>
       <nav class="topbar_nav">
         <a href="#about" class="active" @click.prevent="scrollTo('about')"
@@ -44,8 +44,8 @@
 </template>
 
 <script>
-import Carousel from "./Carousel.vue";
-import CarouselSlide from "./CarouselSlide.vue";
+import Carousel from "./../carousel/Carousel";
+import CarouselSlide from "./../carouselSlide/CarouselSlide";
 export default {
   name: "Header",
   components: {
@@ -57,17 +57,17 @@ export default {
       slides: [
         {
           text: "We transform every /n dream into digital /n reality",
-          img: "./assets/img/marvin-meyer-571072-unsplash.png",
+          img: "./../assets/img/marvin-meyer-571072-unsplash.png",
           alt: "marvin-meyer-571072-unsplash",
         },
         {
           text: "We transform every dream into digital reality",
-          img: "./assets/img/marvin-meyer-571072-unsplash copy1.png",
+          img: "./../assets/img/marvin-meyer-571072-unsplash copy1.png",
           alt: "marvin-meyer-571072-unsplash copy1",
         },
         {
           text: "We transform every dream into digital reality",
-          img: "./assets/img/marvin-meyer-571072-unsplash copy2.png",
+          img: "./../assets/img/marvin-meyer-571072-unsplash copy2.png",
           alt: "marvin-meyer-571072-unsplash copy2",
         },
       ],
@@ -85,81 +85,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.topbar {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .topbar_logo {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0px;
-    padding: 0px;
-    img {
-      height: 80px;
-      width: 80px;
-    }
-  }
-
-  .topbar_nav {
-    font-size: 14px;
-    line-height: 20px;
-    font-family: Roboto-Regular;
-    color: #000000;
-  }
-
-  .topbar_nav a {
-    margin: 0 60px;
-    transition: opacity 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  .topbar-social {
-    margin-left: auto;
-    margin-right: 10px;
-  }
-}
-
-.icon::after {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  font-size: 14px;
-  margin: 0 5px;
-  background-image: url(./../assets/svg/twitter.svg);
-}
-
-.icon {
-  transition: opacity 0.3s;
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
-.icon_twitter::after {
-  background-image: url(./../assets/svg/twitter.svg);
-}
-
-.icon_facebook::after {
-  background-image: url(./../assets/svg/facebook.svg);
-}
-.icon_facebook::after {
-  background-image: url(./../assets/svg/facebook.svg);
-}
-.icon_linkedin::after {
-  background-image: url(./../assets/svg/linkedin.svg);
-}
-</style>
+<style src="./header.scss" lang="scss"></style>
