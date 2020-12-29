@@ -1,6 +1,6 @@
-.tumultuous {
+.about_title {
   display: block;
-  padding: 25px 175px;
+  padding: 25px 25px;
   text-align: center;
   font-family: Roboto-italic;
   font-size: 22px;
@@ -11,9 +11,17 @@ h4 {
   margin: 0;
   padding: 0;
 }
+@media (min-width: 592px) {
+  .about_body {
+    display: flex;
+  }
+}
+@media (max-width: 592px) {
+  .about_body {
+    display: block;
+  }
+}
 .about_body {
-  display: flex;
-  max-height: 720px;
   .about_img {
     min-width: 50%;
     height: 100%;
