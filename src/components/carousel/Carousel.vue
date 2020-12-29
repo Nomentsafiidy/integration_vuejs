@@ -13,10 +13,12 @@ export default {
       index: 0,
       slides: [],
       direction: "right",
+      slideInterval: null,
     };
   },
   mounted() {
     this.slides = this.$children;
+    this.slideInterval = setInterval(this.autoSlide, 3000);
   },
   computed: {
     slidesCount() {
@@ -25,17 +27,28 @@ export default {
   },
   methods: {
     next() {
+      clearInterval(this.slideInterval);
       this.index++;
       this.direction = "right";
       if (this.index >= this.slidesCount) {
         this.index = 0;
       }
+      this.slideInterval = setInterval(this.autoSlide, 3000);
     },
     prev() {
+      clearInterval(this.slideInterval);
       this.index--;
       this.direction = "left";
       if (this.index < 0) {
         this.index = this.slidesCount - 1;
+      }
+      this.slideInterval = setInterval(this.autoSlide, 3000);
+    },
+    autoSlide() {
+      this.direction = "right";
+      this.index++;
+      if (this.index >= this.slidesCount) {
+        this.index = 0;
       }
     },
   },
