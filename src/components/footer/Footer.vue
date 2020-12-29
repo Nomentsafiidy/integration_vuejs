@@ -64,8 +64,8 @@
       </section>
     </article>
     <article class="footer_bottom">
-      <div>Copyright © Tous droits réservés 2018</div>
-      <div>
+      <div class="footer_Copyright">Copyright © Tous droits réservés 2018</div>
+      <div class="footer_bottom_link">
         <a href="#" class="margin_left">Conditions générales de vente</a>
         <a href="#" class="margin_left">Politique de confidentialité </a>
         <a href="#" class="margin_left"> Mentions légales</a>
